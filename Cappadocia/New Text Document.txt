@@ -1,0 +1,8 @@
+responsive: [
+            {
+                breakpoint: 601,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
