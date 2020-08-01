@@ -1,0 +1,338 @@
+/*Подрубаем шрифт*/
+
+@font-face {
+	font-family: Sansation;
+	font-weight: light;
+	src: url(../fonts/Sansation_Light.woff) format("woff"), url(../fonts/Sansation_Light.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: Rubik;
+	font-weight: 700;
+	src: url(../fonts/Rubik-Bold.ttf) format("ttf");
+}
+
+@font-face {
+	font-family: Rubik;
+	font-weight: normal;
+	src: url(../fonts/Rubik-Regular.ttf) format("ttf");
+}
+
+/*Сбрасываем стили*/
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-family: Rubik, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	outline-color: gold;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	height: 100%;
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+button {
+	background: 0 0;
+	border: none;
+	cursor: pointer;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    
+	height: 78px;
+    width: 100%;
+    z-index: 10;
+	padding: 0 15px 0 0;
+
+    background-color: #fff;
+}
+
+.header-logo{
+	width: 205px;
+	height: 100%;
+	background-color: #000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.header-logo-pic{
+}
+
+
+.header-link{
+	margin: 0 190px 0 30px;
+}
+
+.header-link-title{
+	text-transform: uppercase;
+	font-family: Rubik;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 48px;
+	line-height: 57px;
+	line-height: 57px;
+}
+
+.header-nav{
+
+}
+
+.header-nav-list{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	width: 600px;
+}
+
+.header-nav-list li a{
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.header-nav-list li:last-of-type:before {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	left: 0;
+	top: 45%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background: url(../images/arrow.png) center center/cover no-repeat;
+}
+
+.header-nav-list > li:last-of-type{
+	padding-left: 20px;
+	position: relative;
+}
+
+.header-nav-list li:last-of-type:hover ul {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.inner-list-ul {
+	position: absolute;
+	width: 120%;
+	opacity: 0;
+	pointer-events: none;
+	background: #fff;
+	left: 0;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+.header-nav-list li:hover ul{
+	display: block;
+}
+
+.inner-list-ul li {
+	padding: 20px 5px 20px 0px;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.inner-list-ul li:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.inner-list-ul li::before{
+	display: none;
+
+}
+
+.section-header{
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.green-section{
+	height: 100vh;
+	width: 100%;
+	background:#22AB78;
+
+	position: relative;
+}
+
+.def-title {
+	font-size: calc(42px + 30 * ((100vw - 320px)/ (1920 - 320))) 0;
+	margin-bottom: 20px;
+}
+
+.journal-img {
+	width: 100%;
+	height: auto;
+}
+
+.journal-title {
+	position: absolute;
+	-webkit-transition: 1.2s;
+	-o-transition: 1.2s;
+	transition: 1.2s;
+	-webkit-transform: scale(.7);
+	-ms-transform: scale(.7);
+	transform: scale(.7);
+	left: 4%;
+	top: 5%;
+	font-size: calc(22px + 9 * ((100vw - 320px)/ (1920 - 320)));
+}
+
+.journal-slide.swiper-slide {
+	-webkit-transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(30%, 0);
+	-ms-transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(30%, 0);
+	transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(30%, 0);
+	opacity: .6;
+	-webkit-transition: .5s!important;
+	-o-transition: .5s!important;
+	transition: .5s!important;
+	position: relative;
+	z-index: 1;
+}
+
+.journal-slide.swiper-slide-next~.journal-slide.swiper-slide {
+	-webkit-transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(-30%, 0);
+	-ms-transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(-30%, 0);
+	transform: rotate(0) scale(.7) skew(0deg, 0deg) translate(-30%, 0);
+}
+
+/*Стили для некст и прев слайдов*/
+
+.journal-slide.swiper-slide-next,
+.journal-slide.swiper-slide-prev {
+	-webkit-transform: scale(.9);
+	-ms-transform: scale(.9);
+	transform: scale(.9);
+	opacity: .8;
+	z-index: 2;
+}
+
+.journal-slide.swiper-slide-active {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	opacity: 1;
+	z-index: 3;
+}
+
+.journal-slide.swiper-slide-active .journal-title {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.js-journal {
+	padding: 60px 0;
+	margin-top: 40px;
+}
+
+.swiper-button-next {
+	width: 100%;
+	text-align: right;
+}
+
+.swiper-button-next:after {
+	display: none;
+}
+
+.price-btn {
+	background-color: #fff;
+	padding: 17px 25px;
+	font-weight: 300;
+	font-family: Sansation, sans-serif;
+	color: #000;
+	border: 2px solid #fff;
+	-webkit-transition: .6s;
+	-o-transition: .6s;
+	transition: .6s;
+	display: block;
+	margin: calc(30px + 40 * ((100vw - 320px)/ (1920 - 320))) auto 0;
+}
+
+.price-btn:hover {
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.webp .header-list li:last-of-type:before {
+	background: url(../images/arrow.webp) center center/cover no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

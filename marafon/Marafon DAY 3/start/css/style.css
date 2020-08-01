@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    max-width: 1920px;
+    height: 100vh;
+    
+    background-image: url(../images/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-inner{
+    width: 100%;
+    height: 100vh;
+    
+    background-image: url(../images/header-bg-shadow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__top{
+    padding-top: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__top-logo{
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.header__top-text{
+    margin-right: 460px;
+}
+
+.header__top-phone{
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: -25px;
+}
+
+.header__top-phone-text{
+    margin-top: 13px;
+    padding: 10px 15px;
+    
+    font-size: 11px; 
+    border: 2px solid #e8c498;
+    border-radius: 10px;
+}
+
+
+.header_top-menu{
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.header-text{
+    font-size: 35px;
+    font-weight: 800;
+    color: #fff;
+    margin-top: 190px;
+}
+
+.header-arrow{
+    margin-left: 350px;
+    margin-top: 20px;
+}
+
+.header-cost-btn{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    width: 340px;
+    height: 65px;
+    padding: 25px 0;
+    background-color: #e6b87c;
+    border-radius: 10px;
+    margin-top: 30px;
+   
+}
+
+.header-list{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 120px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

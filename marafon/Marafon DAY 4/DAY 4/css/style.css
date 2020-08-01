@@ -1,0 +1,279 @@
+*,
+*::before,
+*,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+font-family: "Myra 4F Caps";
+font-display: swap;
+src: url("../fonts/Myra 4F Caps bold.ttf") format("truetype");
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Myra 4F Caps ";
+font-display: swap;
+src: url("../fonts/Myra 4F Caps Light.ttf") format("truetype");
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Myra 4F Caps ";
+font-display: swap;
+src: url("../fonts/Myra 4F Caps Regularight.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Roboto-Regular";
+font-display: swap;
+src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Roboto-Medium";
+font-display: swap;
+src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+font-weight: 500;
+font-style: normal;
+}
+
+
+a{    
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    background-color: #fff;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 55px;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+}
+
+.header__top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header__top-logo{
+    margin-left: 0;
+    margin-right: auto;
+    
+}
+
+.header__top-nav-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    
+    margin: 0 auto; 
+    
+    
+}
+
+.header__top-nav-ul-item{
+    position: relative;
+}
+
+.header__top-nav-ul-item::before{
+    content: '';
+    position: absolute;
+    display: none;
+    
+    width:100%;
+    height: 3px;
+    background-color: #e94544;  
+}
+
+.header__top-nav-ul-item:hover::before{
+    display: block;
+    top: -21px;
+}
+
+.header__top-nav-ul-item-link{
+    font-family: "Roboto-Medium";
+}
+
+.header__top-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 65px;
+    margin-right: 0;
+    margin-left: auto;    
+}
+
+.header__content{
+    background-image: url(../images/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    height: 660px;
+    
+    text-align: center;
+    padding: 1px;
+}
+
+.header__content-title{
+    text-transform: uppercase;
+    font-family: "Myra 4F Caps";
+    font-size: 115px;
+    font-weight: 700;
+    color: #fff;
+    
+    margin-top: 200px;
+}
+
+.header__content-subTitle{
+    text-transform: uppercase;
+    font-family: "Roboto-Regular";
+    font-size: 18px;
+    color: #fff;
+    
+    margin-top: 30px;
+}
+
+.header__content-btn{
+    position: relative;
+    display: block;
+    
+    width: 250px;
+    padding: 20px;
+    
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #000;
+    
+    background-color: #00f7ff;
+    border-radius: 50px;
+    
+    margin: 70px auto;
+}
+
+.header__content-btn::before {
+  content: '';
+  position: absolute;
+    display: none;
+  left: -8px;
+  top: -7px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border: 3px solid #000;
+}
+.header__content-btn:hover::before{
+    display: block;
+}
+
+.header-burgerMenu{
+    position: absolute;
+    margin-left: 0;
+    
+    width: 30px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    left: 12px;
+    top: 50%;
+    cursor: pointer;
+    
+}
+
+.menu-icon{
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #343434;   
+    z-index: 1000;
+}
+
+.menu-icon::before{
+    content: '';
+    
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    
+    width: 30px;
+    height: 5px;
+    background-color: #343434;
+    transition: transform .2s ease-in, top .2s linear .2s;
+}
+
+.menu-icon::after{
+    content: '';
+    
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    
+    width: 30px;
+    height: 5px;
+    background-color: #343434; 
+    transition: transform .2s ease-in, top .2s linear .2s;
+}
+
+.menu-icon.menu-icon-active{
+    background-color: transparent;
+}
+
+.menu-icon.menu-icon-active::before{
+    transform: rotate(45deg);
+    top: 0;
+    transition: top .2s linear, transform .2s ease-in .2s;
+}
+
+.menu-icon.menu-icon-active::after{
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top .2s linear, transform .2s ease-in .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

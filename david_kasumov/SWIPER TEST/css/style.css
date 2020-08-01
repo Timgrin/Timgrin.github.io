@@ -1,0 +1,78 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+	max-width: 1672px;
+	padding: 0 15px;
+	margin: 0 auto;
+    
+}
+
+.swiper-container{
+	height: 100%;
+
+	width: 1200px;
+}
+
+.swiper-wrapper{
+}
+
+.swiper-slide {
+	
+	-webkit-transition: .5s!important;
+	-o-transition: .5s!important;
+	transition: .5s!important;
+	position: relative;
+	/* z-index: 1; */
+	width: 900px;
+}
+
+.journal-title {
+	position: absolute;
+	-webkit-transition: 1.2s;
+	-o-transition: 1.2s;
+	transition: 1.2s;
+	-webkit-transform: scale(.7);
+	-ms-transform: scale(.7);
+	transform: scale(.7);
+	left: 4%;
+	top: 5%;
+    font-size: calc(22px + 9 * ((100vw - 320px)/ (1920 - 320)));
+    color: #FFF;
+}
+
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+	-webkit-transform: scale(.9);
+	-ms-transform: scale(.9);
+	transform: scale(.9);
+	opacity: .9;
+	z-index: 2;
+}
+
+.swiper-slide.swiper-slide-duplicate-next,
+.swiper-slide.swiper-slide-duplicate-prev {
+	-webkit-transform: scale(.8);
+	-ms-transform: scale(.8);
+	transform: scale(.8);
+	opacity: .8;
+	z-index: 1;
+}
+
+.swiper-slide.swiper-slide-active {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+	z-index: 3;
+}
+
+/*Стили для обычных слайдов*/
+
+
+
